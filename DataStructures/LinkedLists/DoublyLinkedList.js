@@ -22,6 +22,17 @@ class DoublyLinkedList {
     return node ? node.data : null;
   }
 
+  at(index) {
+    if (index < 0 || index > this.length) return null;
+
+    let node = this.head;
+    while (index > 0) {
+      node = node.next;
+      index--;
+    }
+    return node.data;
+  }
+
   remove(key, getKeyCallback) {
     let nodeToBeRemoved = this.head;
     // find node to be removed in the list

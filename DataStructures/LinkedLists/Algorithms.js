@@ -31,4 +31,12 @@ function reverse(lst) {
   rec(lst.head);
 }
 
-export { printList, reverse };
+function toArray(lst) {
+  const array = [];
+  for (const v of lst) {
+    array.push(v);
+  }
+  return array;
+}
+
+export { printList, reverse, toArray };
